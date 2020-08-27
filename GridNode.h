@@ -6,12 +6,14 @@
 #include<utility>
 #include<vector>
 #include<algorithm>
+#include<string>
 #include "Node.h"
 
 using std::vector;
 using std::pair;
 using std::cout;
 using std::endl;
+using std::string;
 
 // Grid Node is every grid element that gets added to an oct tree of grids at high level. 
 // This class has to hold the resolution, width and leaf GridNode Pointers. 
@@ -19,12 +21,15 @@ using std::endl;
 // X is vehicle longitudinal axis and Y the lateral 
 class GridNode {
 public:
+	typedef std::pair<long long, long long> Cood;
 	// The grid
 	vector<vector<Node>> Map;
 	// Default Constructor - only 1st initiation
 	GridNode();
 	// Constructor with Center Point
 	GridNode(long long &X, long long &Y);
+	// Destructor
+	~GridNode();
 	// Function to define endpoints
 	void defineEndpoints();
 	// Function to update Coordinates of Map
@@ -40,6 +45,16 @@ public:
 	GridNode* GetSouthEast();
 	GridNode* GetNorthWest();
 	GridNode* GetSouthWest();
+	void CreateNodeEast();
+	void CreateNodeWest();
+	void CreateNodeNorth();
+	void CreateNodeSouth();
+	void CreateNodeNorthEast();
+	void CreateNodeNorthWest();
+	void CreateNodeSouthEast();
+	void CreateNodeSouthWest();
+	// Debug Functions
+	void printCenter();
 
 private:
 	// range of grid in mm

@@ -1,5 +1,5 @@
 #include "Node.h"
-
+#include<iostream>
 // Default Constructor
 Node::Node() :coordinates({ 0,0 }), probability(0.5) {}
 
@@ -35,4 +35,9 @@ void Node::UpdateCoordinates(float x, float y) {
 // Update Probability
 void Node::UpdateProbability(float prob) {
 	this->probability = prob;
+}
+
+// Get coordinates of the center
+std::pair<long long, long long> Node::getCenterCoordinates() {
+	return coordinates;
 }

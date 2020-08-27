@@ -6,6 +6,7 @@
 
 class Node {
 public:
+	typedef std::pair<long long, long long> Cood;
 	// Default construtor which assigns (0,0) and 0.5 Prob
 	Node();
 	// Constructor that assigns (x,y) and 0.5 prob
@@ -20,6 +21,9 @@ public:
 	void UpdateCoordinates(float x, float y);
 	// Function to update the Probability by Log odds
 	void UpdateProbability(float prob);
+	// Function that returns coordinates of center
+	Cood getCenterCoordinates();
+
 private:
 	std::pair<long long, long long> coordinates;
 	float probability;

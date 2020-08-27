@@ -24,6 +24,17 @@ GridNode::GridNode(long long& X, long long& Y):
 	updateMapCoordinates();
 }
 
+GridNode::~GridNode() {
+	delete East;
+	delete West;
+	delete North;
+	delete South;
+	delete NorthEast;
+	delete SouthEast;
+	delete SouthWest;
+	delete NorthWest;
+}
+
 // Function that defines the endpoints in mm
 void GridNode::defineEndpoints() {
 	BottomLeft = { Center.first - (Height / 2),
@@ -103,5 +114,67 @@ GridNode* GridNode::GetNorthEast() {
 //Function returns pointer to northwest node
 GridNode* GridNode::GetNorthWest() {
 	return NorthWest;
+}
+
+// Function to create a GridNode in the East
+void GridNode::CreateNodeEast() {
+	long long x = Center.first;
+	long long y = Center.second - Width;
+	East = new GridNode(x,y);
+}
+
+// Function to create a GridNode in the West
+void GridNode::CreateNodeWest() {
+	long long x = Center.first;
+	long long y = Center.second + Width;
+	West = new GridNode(x,y);
+}
+
+// Function to create a GridNode in the North
+void GridNode::CreateNodeNorth() {
+	long long x = Center.first + Height;
+	long long y = Center.second;
+	North = new GridNode(x,y);
+}
+
+//Function to create GridNode in the South
+void GridNode::CreateNodeSouth() {
+	long long x = Center.first - Height;
+	long long y = Center.second;
+	South = new GridNode(x,y);
+}
+
+//Function to create GridNode in the NorthEast
+void GridNode::CreateNodeNorthEast() {
+	long long x = Center.first + Height;
+	long long y = Center.second - Width;
+	NorthEast = new GridNode(x,y);
+}
+
+//Function to create GridNode in NorthWest
+void GridNode::CreateNodeNorthWest() {
+	long long x = Center.first + Height;
+	long long y = Center.second + Width;
+	NorthWest = new GridNode(x,y);
+}
+
+//Function to create GridNode in the SouthEast
+void GridNode::CreateNodeSouthEast() {
+	long long x = Center.first - Height;
+	long long y = Center.second - Width;
+	SouthEast = new GridNode(x,y);
+}
+
+//Function to create GridNode in the SouthWest
+void GridNode::CreateNodeSouthWest() {
+	long long x = Center.first - Height;
+	long long y = Center.second + Width;
+	SouthWest = new GridNode(x,y);
+}
+
+void GridNode::printCenter() {
+	std::cout << " The coordinate is (" << Center.first 
+		<< "\t" << Center.second << ")" << std::endl;
+
 }
 
