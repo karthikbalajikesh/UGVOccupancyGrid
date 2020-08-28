@@ -1,15 +1,17 @@
 #include "GridNode.h"
 
-GridNode::GridNode():ResolutionX(20),ResolutionY(20),
-			Height(2000), Width(2000),
-	Center({Height/2,0}) {
+GridNode::GridNode() :ResolutionX(20), ResolutionY(20),
+Height(2000), Width(2000),
+Center({ Height / 2,0 }) {
 	/*
 	Constructor to create a 2D vector of Coordinates,
 	with Global center = Local center.
 	*/
 	// Create Empty Vector of Nodes of appropriate Size
 	Map = vector<vector<Node>>(Height / ResolutionX,
-						vector<Node>(Width/ResolutionY));
+		vector<Node>(Width / ResolutionY));
+	SizeX = Height / ResolutionX;
+	SizeY = Width / ResolutionY;
 	defineEndpoints();
 	initiatePointers();
 	updateMapCoordinates();

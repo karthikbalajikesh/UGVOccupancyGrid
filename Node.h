@@ -24,6 +24,8 @@ public:
 	// Function that returns coordinates of center
 	Cood getCenterCoordinates();
 
+	
+
 private:
 	std::pair<long long, long long> coordinates;
 	float probability;

@@ -55,6 +55,8 @@ public:
 	void CreateNodeSouthWest();
 	// Debug Functions
 	void printCenter();
+	int SizeX;
+	int SizeY;
 
 private:
 	// range of grid in mm
