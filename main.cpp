@@ -1,15 +1,17 @@
 #include"GridNode.h"
 #include"PolarGrid.h"
 #include"Localization.h"
+#include "TempNode.h"
 
 std::vector<std::pair<float, float>> createVector();
 void testLocalization();
-
+void testTempNode();
+void testGridNode();
 
 ///////////////////////////////////////////////////////////////////////
 int main() {
 	
-	testLocalization();
+	testGridNode();
 	return 0;
 }
 //////////////////////////////////////////////////////////////////////
@@ -17,6 +19,21 @@ int main() {
 void testLocalization() {
 	Localization A;
 	A.printState();
+}
+
+void testTempNode() {
+	TempNode A;
+
+	return;
+
+}
+
+void testGridNode() {
+	long long origin = 0;
+	GridNode A(origin,origin);
+	
+	return;
+
 }
 
 std::vector<std::pair<float,float>> createVector() {

@@ -15,15 +15,19 @@ Center({ Height / 2,0 }) {
 	defineEndpoints();
 	initiatePointers();
 	updateMapCoordinates();
-
 }
 
 GridNode::GridNode(long long& X, long long& Y):
 	Center({X,Y}),ResolutionX(20),ResolutionY(20),
 	Height(2000),Width(2000){
+	Map = vector<vector<Node>>(Height / ResolutionX,
+		vector<Node>(Width / ResolutionY));
+	SizeX = Height / ResolutionX;
+	SizeY = Width / ResolutionY;
 	initiatePointers();
 	defineEndpoints();
 	updateMapCoordinates();
+	
 }
 
 GridNode::~GridNode() {
@@ -54,15 +58,17 @@ void GridNode::defineEndpoints() {
 void GridNode::updateMapCoordinates() {
 	int multiplierX = 1;
 	int multiplierY = 1;
-	for (auto x : Map) {
-		for (auto y : x) {
-			y.UpdateCoordinates(multiplierX*ResolutionX/2,
-						multiplierY*(-ResolutionY)/2);
+	for(int i = 0;i<SizeY;i++){
+		for(int j =0;j<SizeX;j++){
+			long long X = BottomLeft.first + (multiplierX * (long long)(ResolutionX / 2));
+			long long Y = BottomLeft.second - (multiplierY * (long long)(ResolutionY / 2));
+			Map[i][j].UpdateCoordinates(X,Y);
 			multiplierY += 2;
 		}
 		multiplierX += 2;
 		multiplierY = 1;
 	}
+	std::cout << "update" << std::endl;
 }
 
 
