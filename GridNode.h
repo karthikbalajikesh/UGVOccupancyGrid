@@ -37,22 +37,34 @@ public:
 	// Pointer Functions
 	void initiatePointers();
 	// Pointer Return Functions
-	GridNode* GetWest();
-	GridNode* GetEast();
-	GridNode* GetNorth();
-	GridNode* GetSouth();
-	GridNode* GetNorthEast();
-	GridNode* GetSouthEast();
-	GridNode* GetNorthWest();
-	GridNode* GetSouthWest();
+
 	void CreateNodeEast();
 	void CreateNodeWest();
 	void CreateNodeNorth();
 	void CreateNodeSouth();
-	void CreateNodeNorthEast();
-	void CreateNodeNorthWest();
-	void CreateNodeSouthEast();
-	void CreateNodeSouthWest();
+	
+	// Expansion Related Functions
+	void Expand();
+	void EditConnectivityEast();
+	void EditConnectivityWest();
+	void EditConnectivityNorth();
+	void EditConnectivitySouth();
+
+	// Clockwise and AntiClockwise Search Functions
+	void GoClockWiseNorth();
+	void GoAntiClockWiseNorth();
+	void GoClockWiseEast();
+	void GoAntiClockWiseEast();
+	void GoClockWiseWest();
+	void GoAntiClockWiseWest();
+	void GoClockWiseSouth();
+	void GoAntiClockWiseSouth();
+
+
+	GridNode* West;
+	GridNode* East;
+	GridNode* North;
+	GridNode* South;
 	// Debug Functions
 	void printCenter();
 	int SizeX;
@@ -69,14 +81,8 @@ private:
 	pair<long long, long long> BottonRight;
 	pair<long long, long long> TopLeft;
 	pair<long long, long long> TopRight;
-	GridNode* West;
-	GridNode* East;
-	GridNode* North;
-	GridNode* South;
-	GridNode* NorthEast;
-	GridNode* SouthEast;
-	GridNode* SouthWest;
-	GridNode* NorthWest;
+	
+
 };
 
 #endif // !GRIDNODE_H

@@ -1,2 +1,34 @@
 ﻿  GridNode.cpp
+  main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty=int
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty1=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :             _Other1=int,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :             _Other2=int
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :             _Other1=int,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :             _Other2=int
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(44): message :         ]
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:             _Ty=int
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:             _Ty2=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         ]
   UGV.vcxproj -> C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Debug\UGV.exe
