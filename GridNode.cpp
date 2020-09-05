@@ -17,7 +17,7 @@ Center({ Height / 2,0 }) {
 	updateMapCoordinates();
 }
 
-GridNode::GridNode(long long& X, long long& Y):
+GridNode::GridNode(long long X, long long Y):
 	Center({X,Y}),ResolutionX(20),ResolutionY(20),
 	Height(2000),Width(2000){
 	Map = vector<vector<Node>>(Height / ResolutionX,
@@ -41,12 +41,12 @@ GridNode::~GridNode() {
 void GridNode::defineEndpoints() {
 	BottomLeft = { Center.first - (Height / 2),
 				Center.second + (Width / 2) };
-	BottonRight = {BottomLeft.first,
+	BottomRight = {BottomLeft.first,
 				Center.second - (Width / 2) };
 	TopLeft = { BottomLeft.first + Height, 
 				BottomLeft.second };
 	TopRight = { TopLeft.first,
-				BottonRight.second };
+				BottomRight.second };
 
 }
 
@@ -67,6 +67,68 @@ void GridNode::updateMapCoordinates() {
 	
 }
 
+//////////////////// Search Functions //////////////
+bool GridNode::inGrid(long long x, long long y) {
+	if (x < TopLeft.first && x >= BottomLeft.first) {
+		if (y <= BottomLeft.second && y > BottomRight.second) {
+			return true;
+		}
+	}
+	return false;
+}
+
+std::pair<int, int> GridNode::BinarySearch(long long x, long long y) {
+	int maxX = SizeX - 1;
+	int minX = 0;
+	int maxY = SizeY - 1;
+	int minY = 0;
+	int IndexX = (int)(maxX + minX) / 2;
+	int IndexY = (int)(maxY + minY) / 2;
+	Node CurrentNode = this->Map[IndexX][IndexY];
+	while (!CurrentNode.CheckCoordinate(x,y)) {
+		// loop enters when current node is not desired node
+		std::vector<long long> bounds = CurrentNode.getbounds();
+		int upperX = bounds[0], lowerX = bounds[1];
+		int upperY = bounds[2], lowerY = bounds[3];
+		// Check for the lower bounds
+		if (lowerX <= x) {
+			// means check in north
+			minX = IndexX;
+		}
+		if (upperX <= x) {
+			minX = IndexX + 1;
+		}
+		if (y <= upperY) {
+			// Due to coordinate system
+			minY = IndexY;
+		}
+		if (y < lowerY) {
+			minY = IndexY + 1;
+		}
+
+		// check for the Upper bounds
+		if (upperX > x) {
+			maxX = IndexX;
+		}
+		if (lowerX >= x) {
+			maxX = IndexX - 1;
+		}
+		if (y > lowerY) {
+			maxY = IndexY;
+		}
+		if (y >= upperY) {
+			maxY = IndexY - 1;
+		}
+		// update the node
+		IndexX = (minX + maxX) / 2;
+		IndexY = (minY + maxY) / 2;
+		CurrentNode = this->Map[IndexX][IndexY];
+
+	}
+
+	return std::make_pair(IndexX, IndexY);
+}
+
 
 /////////////////Pointer Functions//////////////
 void GridNode::initiatePointers() {
@@ -75,6 +137,8 @@ void GridNode::initiatePointers() {
 	North = NULL;
 	South = NULL;
 }
+
+
 
 // Function to create a GridNode in the East
 void GridNode::CreateNodeEast() {

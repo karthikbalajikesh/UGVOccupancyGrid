@@ -1,11 +1,10 @@
 #include"GridNode.h"
 #include"PolarGrid.h"
 #include"Localization.h"
-#include "TempNode.h"
+
 
 std::vector<std::pair<float, float>> createVector();
 void testLocalization();
-void testTempNode();
 void testGridNode();
 
 ///////////////////////////////////////////////////////////////////////
@@ -21,17 +20,15 @@ void testLocalization() {
 	A.printState();
 }
 
-void testTempNode() {
-	TempNode A;
 
-	return;
-
-}
 
 void testGridNode() {
 	long long origin = 0;
 	GridNode A(origin,origin);
-	
+	//std::pair<int,int> Indices = A.BinarySearch(992,-992);
+	//std::cout << "( " << Indices.first << "  ,   " << Indices.second << "  )" << std::endl;
+	A.Expand();
+
 	return;
 
 }

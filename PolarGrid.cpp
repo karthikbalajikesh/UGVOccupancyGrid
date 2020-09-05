@@ -1,7 +1,8 @@
 #include "PolarGrid.h"
 
-PolarGrid::PolarGrid() :PolarMap(vector<vector<PolarNode>>
+PolarGrid::PolarGrid(Localization* SE) :PolarMap(vector<vector<PolarNode>>
 					(98, vector<PolarNode>(36,PolarNode()))){
+	StateEstimator = SE;
 	this->updatePolarCoordinates();
 	SizeX = 98;
 	SizeY = 36;
@@ -30,6 +31,7 @@ void PolarGrid::updatePolarOccupancy(vector<std::pair<float,float>> Measurements
 	Any occupied node will be given 2, free node 0 and unknown is 1;
 	Hence for every obstacle mapped, all nodes beyond obstacle are updated as unknown.
 	*/
+	transformCoordinates(Measurements);
 
 	for (auto x : Measurements) {
 		// Function returns the index of the Node which is measured as obstacle. 
@@ -102,4 +104,30 @@ std::pair<int, int> PolarGrid::findNodeIndex(std::pair<float, float> reading) {
 
 	return std::make_pair(IndexR, IndexPhi);
 	
+}
+
+void PolarGrid::transformCoordinates(vector < pair<float, float>> &Measurements) {
+	/* 
+	Function accepts the measurement vector from the lidar and transforms the 
+	coordinates into vehicle frame in polar coordinates. 
+	Input: Measurements <Angle in degrees, range in mm>
+	Output: Measurements <theta_Effective in degrees, range in mm>
+	Equation : Theta_effective = Theta_pose from Localization 
+									- THeta_lidar from Measurement + 360
+	*/
+
+	for (pair<float, float> coordinate : Measurements) {
+		float theta_lidar = coordinate.first;
+		float theta_pose = StateEstimator->getAngle();
+		coordinate.first = theta_pose - theta_lidar + 360.0;
+	}
+}
+
+void PolarGrid::Reset() {
+	// Function resets occupancy to 0
+	for (int i = 0;i < 98;i++) {
+		for (int j = 0;j < 36;j++) {
+			PolarMap[i][j].updateOccupancy(0);
+		}
+	}
 }

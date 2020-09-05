@@ -4,8 +4,11 @@
 
 #include<iostream>
 #include<Eigen/Dense>
+#include<vector>
 
-using Eigen::VectorXd;
+using std::vector;
+
+using Eigen::VectorXf;
 
 class Localization {
 public:
@@ -16,8 +19,12 @@ public:
 	Localization();
 	void printState();
 	void publicizeState();
+	vector<long long> getState();
+	// Function that returns angle in degrees in float
+	// for polar grid
+	float getAngle();
 private:
-	VectorXd state;
+	VectorXf state; // x in m, y in m and theta in degrees
 
 };
 

@@ -27,7 +27,7 @@ public:
 	// Default Constructor - only 1st initiation
 	GridNode();
 	// Constructor with Center Point
-	GridNode(long long &X, long long &Y);
+	GridNode(long long X, long long Y);
 	// Destructor
 	~GridNode();
 	// Function to define endpoints
@@ -36,15 +36,20 @@ public:
 	void updateMapCoordinates();
 	// Pointer Functions
 	void initiatePointers();
-	// Pointer Return Functions
-
+	
+	// Search and Query Functions
+	// Function that returns true if a coordinate is in the 
+	// bounds of the grid
+	bool inGrid(long long x, long long y);
+	std::pair<int, int> BinarySearch(long long x, long long y);
+	
+	
+	// Expansion Related Functions
+	void Expand();
 	void CreateNodeEast();
 	void CreateNodeWest();
 	void CreateNodeNorth();
 	void CreateNodeSouth();
-	
-	// Expansion Related Functions
-	void Expand();
 	void EditConnectivityEast();
 	void EditConnectivityWest();
 	void EditConnectivityNorth();
@@ -60,15 +65,21 @@ public:
 	void GoClockWiseSouth();
 	void GoAntiClockWiseSouth();
 
-
+	// Variables
+	int SizeX;
+	int SizeY;
+	pair<long long, long long> BottomLeft;
+	pair<long long, long long> BottomRight;
+	pair<long long, long long> TopLeft;
+	pair<long long, long long> TopRight;
 	GridNode* West;
 	GridNode* East;
 	GridNode* North;
 	GridNode* South;
+
 	// Debug Functions
 	void printCenter();
-	int SizeX;
-	int SizeY;
+	
 
 private:
 	// range of grid in mm
@@ -77,10 +88,7 @@ private:
 	int ResolutionX; // = 20 mm - mm/cell
 	int ResolutionY; // = 20 mm - mm/cell
 	pair<long long, long long> Center;
-	pair<long long, long long> BottomLeft;
-	pair<long long, long long> BottonRight;
-	pair<long long, long long> TopLeft;
-	pair<long long, long long> TopRight;
+	
 	
 
 };
