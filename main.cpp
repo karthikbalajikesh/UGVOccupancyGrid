@@ -1,16 +1,18 @@
 #include"GridNode.h"
 #include"PolarGrid.h"
 #include"Localization.h"
-
+#include"CartesianGrid.h"
 
 std::vector<std::pair<float, float>> createVector();
 void testLocalization();
 void testGridNode();
+void testPolarGrid();
+void testCartesianGrid();
 
 ///////////////////////////////////////////////////////////////////////
 int main() {
 	
-	testGridNode();
+	testCartesianGrid();
 	return 0;
 }
 //////////////////////////////////////////////////////////////////////
@@ -46,4 +48,19 @@ std::vector<std::pair<float,float>> createVector() {
 		std::cin >> result[i].second;
 	}
 	return result;
+}
+
+void testPolarGrid() {
+	Localization A1;
+	PolarGrid A(&A1);
+
+ 	std::cout << "Done\n";
+}
+
+void testCartesianGrid() {
+	Localization SE;
+	PolarGrid GridPolar(&SE);
+	CartesianGrid GridCartesian(&GridPolar);
+
+	std::cout << "Done\n";
 }
