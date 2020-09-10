@@ -42,6 +42,8 @@ private:
 
 class CartesianGrid {
 public:
+	// Empty Constructor
+	CartesianGrid();
 	CartesianGrid(PolarGrid* Polar); // Default Constructor
 	// Function that updates the coordinates
 	void UpdateCoordinates();
@@ -58,7 +60,7 @@ public:
 	pair<int, int> TopLeft;
 	pair<int, int> TopRight;
 	int SizeX, SizeY;
-
+	vector<pair<int, int>> InRange;
 private:
 	int Height, Width;
 	int ResolutionX, ResolutionY;

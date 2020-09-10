@@ -2,6 +2,7 @@
 #define OCCUPANCYGRID_H
 
 #include"GridNode.h"
+#include<Eigen/Dense>
 #include<utility>
 #include<vector>
 #include<iostream>
@@ -9,6 +10,7 @@
 #include"Localization.h"
 #include"PolarGrid.h"
 #include "Point.h"
+#include"CartesianGrid.h"
 using std::vector;
 using std::pair;
 
@@ -24,13 +26,18 @@ public:
 	void UpdateLocation();
 	// The main Update Map Function
 	void Update(vector<pair<float, float>> Measurements);
+	// Function that identifies location of point in grid
+	Point BinarySearch(pair<float, float> coordinate);
+
 private:
 	GridNode* Location;
 	GridNode Head;
 	Localization* StateEstimator;
 	PolarGrid TempGrid;
+	CartesianGrid VehicleGrid;
 	vector<pair<long long, long long>> lidarReading;
 	Point VehicleLocation;
+	Point BottomLeftLocation;
 };
 
 

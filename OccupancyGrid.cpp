@@ -3,9 +3,10 @@
 
 OccupancyGrid::OccupancyGrid(Localization* SE):
 	StateEstimator(SE), TempGrid(PolarGrid(StateEstimator)),
-	VehicleLocation(Point()){
+	VehicleLocation(Point()),BottomLeftLocation(Point()){
 	Head =  GridNode();
 	Location = &Head; // Assume location as 0,0
+	VehicleGrid = CartesianGrid(&TempGrid);
 	
 }
 
@@ -37,6 +38,25 @@ void OccupancyGrid::UpdateLocation() {
 void OccupancyGrid::UpdateTempGrid(vector<pair<float, float>>& Measurements) {
 	TempGrid.Reset();
 	TempGrid.updatePolarOccupancy(Measurements);
+}
+
+Point OccupancyGrid::BinarySearch(pair<float, float>& coordinate) {
+	/*
+	Function that performs the binary search in the occupancy grid
+	for a 2D coordinate given as input. 
+
+	Inputs are (x,y) in meters. Step one is to convert them to long 
+	long in mm.
+
+	Step two is to search for the point in x axis first and then
+	y axis, about the previous location. if point is not present, 
+	expand grid. Add pointer to GridNode in Point object.
+
+	Step 3 is to search within the grid node to obtain the index of 
+	node and update it in the point object and return.
+
+	Return Pointer
+	*/
 }
 
 

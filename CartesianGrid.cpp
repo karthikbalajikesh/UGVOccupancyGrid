@@ -48,6 +48,11 @@ void CartesianNode::assignAngle() {
 
 ///////////////////// CARTESIAN GRID /////////////////////
 
+CartesianGrid::CartesianGrid() {
+
+}
+
+
 CartesianGrid::CartesianGrid(PolarGrid* Polar): grid(Polar),
 	Center({0,0}), BottomLeft({ -3000,3000 }),BottomRight({-3000,-3000}),
 	TopLeft({3000,3000}),TopRight({3000,-3000}),
@@ -57,6 +62,7 @@ CartesianGrid::CartesianGrid(PolarGrid* Polar): grid(Polar),
 	Map = (vector<vector<CartesianNode>>(SizeX, vector<CartesianNode>(SizeY)));
 	UpdateCoordinates();
 	UpdatePolarNodes();
+	
 
 }
 
@@ -90,6 +96,7 @@ void CartesianGrid::UpdatePolarNodes() {
 			if (WithinRange(i, j)) {
 				std::pair<int, int> indices = grid->findNodeIndex(Map[i][j].angle, Map[i][j].disttoCenter);
 				Map[i][j].assignPolarNode(grid->getPointer(indices.first, indices.second));
+				InRange.push_back(std::make_pair(i, j));
 			}
 			else {
 				// if out of range, assign Null pointer and unknown occupancy
