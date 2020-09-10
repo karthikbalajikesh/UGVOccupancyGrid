@@ -2,17 +2,22 @@
 #include"PolarGrid.h"
 #include"Localization.h"
 #include"CartesianGrid.h"
+#include"OccupancyGrid.h"
+#include"Point.h"
+#include<chrono>
 
+using namespace std::chrono;
 std::vector<std::pair<float, float>> createVector();
 void testLocalization();
 void testGridNode();
 void testPolarGrid();
 void testCartesianGrid();
+void testOccupancyGrid();
 
 ///////////////////////////////////////////////////////////////////////
 int main() {
 	
-	testCartesianGrid();
+	testOccupancyGrid();
 	return 0;
 }
 //////////////////////////////////////////////////////////////////////
@@ -62,5 +67,17 @@ void testCartesianGrid() {
 	PolarGrid GridPolar(&SE);
 	CartesianGrid GridCartesian(&GridPolar);
 
+	std::cout << "Done\n";
+}
+
+void testOccupancyGrid() {
+	Localization SE;
+	
+	OccupancyGrid Grid(&SE);
+	auto start = high_resolution_clock::now();
+	Point result = Grid.BinarySearch({ 8.3255,-7.212 });
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+	cout << duration.count();
 	std::cout << "Done\n";
 }

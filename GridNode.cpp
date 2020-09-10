@@ -2,7 +2,7 @@
 
 GridNode::GridNode() :ResolutionX(20), ResolutionY(20),
 Height(2000), Width(2000),
-Center({ Height / 2,0 }) {
+Center({ 0,0 }) {
 	/*
 	Constructor to create a 2D vector of Coordinates,
 	with Global center = Local center.
@@ -31,10 +31,12 @@ GridNode::GridNode(long long X, long long Y):
 }
 
 GridNode::~GridNode() {
-	delete East;
-	delete West;
-	delete North;
-	delete South;
+
+
+	//delete East;
+	//delete West;
+	//delete North;
+	//delete South;
 }
 
 // Function that defines the endpoints in mm
@@ -78,6 +80,11 @@ bool GridNode::inGrid(long long x, long long y) {
 }
 
 std::pair<int, int> GridNode::BinarySearch(long long x, long long y) {
+	/*
+	Function returns the indices of the given coordinate in the grid Node
+	*/
+
+
 	int maxX = SizeX - 1;
 	int minX = 0;
 	int maxY = SizeY - 1;
@@ -102,7 +109,7 @@ std::pair<int, int> GridNode::BinarySearch(long long x, long long y) {
 			// Due to coordinate system
 			minY = IndexY;
 		}
-		if (y < lowerY) {
+		if (y <= lowerY) {
 			minY = IndexY + 1;
 		}
 
@@ -110,13 +117,13 @@ std::pair<int, int> GridNode::BinarySearch(long long x, long long y) {
 		if (upperX > x) {
 			maxX = IndexX;
 		}
-		if (lowerX >= x) {
+		if (lowerX > x) {
 			maxX = IndexX - 1;
 		}
 		if (y > lowerY) {
 			maxY = IndexY;
 		}
-		if (y >= upperY) {
+		if (y > upperY) {
 			maxY = IndexY - 1;
 		}
 		// update the node

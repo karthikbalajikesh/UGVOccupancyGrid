@@ -38,6 +38,12 @@ private:
 	vector<pair<long long, long long>> lidarReading;
 	Point VehicleLocation;
 	Point BottomLeftLocation;
+
+	// Auxillary functions
+	pair<long long, long long> convertCoordinate(pair<float, float> Coordinate);
+	GridNode* findGridNode(pair<long long, long long> Coordinate);
+	// Function to create a radius 20 grid around the origin
+	void constructPrimaryGrid();
 };
 
 
