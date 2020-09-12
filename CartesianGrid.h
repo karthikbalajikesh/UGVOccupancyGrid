@@ -35,6 +35,8 @@ public:
 	double disttoCenter;
 	double angle;
 
+
+
 private:
 	int width, height;
 	std::pair<int, int> Center;

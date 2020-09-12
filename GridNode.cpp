@@ -262,6 +262,30 @@ void GridNode::Expand() {
 	}
 }
 
+void GridNode::Expand(std::vector<GridNode*>& GridNodeList) {
+	// first North
+	if (this->North == NULL) {
+		CreateNodeNorth();
+		GridNodeList.push_back(this->North);
+		EditConnectivityNorth();
+	}
+	if (this->East == NULL) {
+		CreateNodeEast();
+		GridNodeList.push_back(this->East);
+		EditConnectivityEast();
+	}
+	if (this->South == NULL) {
+		CreateNodeSouth();
+		GridNodeList.push_back(this->South);
+		EditConnectivitySouth();
+	}
+	if (this->West == NULL) {
+		CreateNodeWest();
+		GridNodeList.push_back(this->West);
+		EditConnectivityWest();
+	}
+}
+
 void GridNode::GoClockWiseEast() {
 	GridNode* Current = this;
 	GridNode* Target = this->East;

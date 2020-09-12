@@ -28,6 +28,8 @@ public:
 	void Update(vector<pair<float, float>> Measurements);
 	// Function that identifies location of point in grid
 	Point BinarySearch(pair<float, float> coordinate);
+	// Vector of GridNode pointers for sampling
+	std::vector<GridNode*> GridNodeList;
 
 private:
 	GridNode* Location;
@@ -44,6 +46,10 @@ private:
 	GridNode* findGridNode(pair<long long, long long> Coordinate);
 	// Function to create a radius 20 grid around the origin
 	void constructPrimaryGrid();
+	void constructFirstQuadrant();
+	void constructSecondQuadrant();
+	void constructThirdQuadrant();
+	void constructFourthQuadrant();
 };
 
 

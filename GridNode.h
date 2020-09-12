@@ -46,6 +46,7 @@ public:
 	
 	// Expansion Related Functions
 	void Expand();
+	void Expand(std::vector<GridNode*> &GridNodeList);
 	void CreateNodeEast();
 	void CreateNodeWest();
 	void CreateNodeNorth();

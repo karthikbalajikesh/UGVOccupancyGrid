@@ -8,6 +8,8 @@ OccupancyGrid::OccupancyGrid(Localization* SE):
 	Location = &Head; // Assume location as 0,0
 	VehicleGrid = CartesianGrid(&TempGrid);
 	constructPrimaryGrid();
+	// Initialize the vector of grid nodes
+	GridNodeList.push_back(&Head);
 }
 
 
@@ -108,7 +110,7 @@ GridNode* OccupancyGrid::findGridNode(pair<long long, long long> Coordinate) {
 				}
 				else {
 					// Expand the Node
-					position->Expand();
+					position->Expand(GridNodeList);
 					position = position->West;
 				}
 			}
@@ -119,7 +121,7 @@ GridNode* OccupancyGrid::findGridNode(pair<long long, long long> Coordinate) {
 				}
 				else {
 					// Expand the Node
-					position->Expand();
+					position->Expand(GridNodeList);
 					position = position->East;
 				}
 			}
@@ -133,7 +135,7 @@ GridNode* OccupancyGrid::findGridNode(pair<long long, long long> Coordinate) {
 				}
 				else {
 					// Expand the Node
-					position->Expand();
+					position->Expand(GridNodeList);
 					position = position->North;
 				}
 			}
@@ -144,7 +146,7 @@ GridNode* OccupancyGrid::findGridNode(pair<long long, long long> Coordinate) {
 				}
 				else {
 					// Expand the Node
-					position->Expand();
+					position->Expand(GridNodeList);
 					position = position->South;
 				}
 			}
@@ -163,8 +165,20 @@ void OccupancyGrid::constructPrimaryGrid() {
 	startup to reduce the number of expansions in binary search
 	*/
 
-	GridNode* position = &Head;
-	// to be continued
+	constructFirstQuadrant();
+	constructSecondQuadrant();
+	constructThirdQuadrant();
+	constructFourthQuadrant();
+	
+}
+
+///////////// Primary Grid Construction Functions//////////
+void OccupancyGrid::constructFirstQuadrant() {
+	/* Function has to construct the grid between (0,0)
+	and (20m,20m)	
+	*/
+
+
 }
 
 
