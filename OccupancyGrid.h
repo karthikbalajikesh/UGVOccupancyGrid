@@ -50,6 +50,20 @@ private:
 	void constructSecondQuadrant();
 	void constructThirdQuadrant();
 	void constructFourthQuadrant();
+	// This is the main function that calculates index locations. 
+	void UpdateGrid();
+	// Function calculates the required index in the required GridNode based on the
+	// cartesian Node coordinate
+	Point findMapNode(pair<int,int> cell);
+	// Function that returns the inverse sensor model value for update
+	float inverseSensorModel(pair<int, int> CartesianIndex);
+	// Log odds update 
+	void updateLogOdds(Point &node, float LogOdds);
+	// make the initial blind short region as free. Required for path planning
+	void setPriors();
+	// construct the initial 150 mm circle
+	vector<pair<float, float>> constructMiniCircle();
+
 };
 
 

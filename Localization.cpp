@@ -30,3 +30,14 @@ float Localization::getAngle() {
 	// return the angle for coordinate transform at PolarGrid
 	return state(2);
 }
+
+pair<float, float> Localization::getVehicleCoordinates() {
+	// Function returns the coordinate
+	return make_pair(state(0), state(1));
+}
+
+void Localization::updateState(float x, float y, float theta) {
+	state(0) = x;
+	state(1) = y;
+	state(2) = theta;
+}

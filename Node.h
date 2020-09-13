@@ -28,6 +28,10 @@ public:
 	Cood getCenterCoordinates();
 	// Function that returns the bounds of the end points
 	std::vector<long long> getbounds();
+	// Function to get Logodds value
+	float getLogOdds();
+	// Function to update Logodds value
+	void UpdateLogOdds(float &LO);
 
 	
 
@@ -36,6 +40,7 @@ private:
 	float probability;
 	int ResolutionX;
 	int ResolutionY;
+	float logOdds;
 	
 };
 

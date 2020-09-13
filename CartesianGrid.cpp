@@ -32,7 +32,7 @@ void CartesianNode::assignPolarNode(PolarNode* Node) {
 }
 
 void CartesianNode::assignAngle() {
-	double theta = (atan(Center.second / Center.first)) * (180 / M_PI);
+	double theta = (atan((double)Center.second / (double)Center.first)) * (180 / M_PI);
 	if (Center.first >= 0 && Center.second >= 0) {
 		angle = theta;
 	}else if (Center.first < 0 && Center.second >= 0) {

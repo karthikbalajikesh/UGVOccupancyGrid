@@ -1,4 +1,114 @@
-﻿  main.cpp
+﻿  CartesianGrid.cpp
+  GridNode.cpp
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,14): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,14): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,14): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,14): warning C4244:             _Ty=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,14): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,34): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,34): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,34): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,34): warning C4244:             _Ty=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(98,34): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,14): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,14): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,14): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,14): warning C4244:             _Ty=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,14): warning C4244:         ]
+  Localization.cpp
+  Node.cpp
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,34): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,34): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,34): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,34): warning C4244:             _Ty=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\GridNode.cpp(99,34): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(47,24): warning C4244: '=': conversion from 'double' to '_Ty1', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(47,24): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(47,24): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(47,24): warning C4244:             _Ty1=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(47,24): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(48,25): warning C4244: '=': conversion from 'double' to '_Ty2', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(48,25): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(48,25): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(48,25): warning C4244:             _Ty2=__int64
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(48,25): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty=double
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty1=__int64
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message : see reference to function template instantiation 'std::pair<__int64,__int64>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message :             _Other1=double,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message :             _Other2=double
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(14): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message : see reference to function template instantiation 'std::pair<__int64,__int64>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message :             _Other1=double,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message :             _Other2=double
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\Node.cpp(13): message :         ]
+  OccupancyGrid.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:             _Ty=double
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:             _Ty2=__int64
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(53,48): warning C4244: '=': conversion from 'double' to '_Ty1', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(53,48): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(53,48): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(53,48): warning C4244:             _Ty1=float
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(53,48): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(54,50): warning C4244: '=': conversion from 'double' to '_Ty2', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(54,50): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(54,50): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(54,50): warning C4244:             _Ty2=float
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(54,50): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(326,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(332,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(337,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(372,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(372,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(373,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(373,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:             _Ty=int
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:             _Ty1=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(202): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(std::pair<int,int> &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\OccupancyGrid.cpp(202): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(std::pair<int,int> &&) noexcept' being compiled
+  PolarGrid.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty=int
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty2=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(65,14): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(132,14): warning C4553: '==': result of expression not used; did you intend '='?
+  main.cpp
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(199,52): warning C4244: '=': conversion from 'double' to '_Ty1', possible loss of data
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(199,52): warning C4244:         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(199,52): warning C4244:         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(199,52): warning C4244:             _Ty1=float
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\PolarGrid.cpp(199,52): warning C4244:         ]
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         with
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
@@ -8,18 +118,18 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty1=float
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         with
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         [
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :             _Other1=int,
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :             _Other2=int
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         ]
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         with
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         [
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :             _Other1=int,
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :             _Other2=int
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(48): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :             _Other1=int,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :             _Other2=int
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message : see reference to function template instantiation 'std::pair<float,float>::pair<int,int,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :             _Other1=int,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :             _Other2=int
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(57): message :         ]
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(669): message : see reference to class template instantiation 'std::chrono::duration<double,std::ratio<1,1>>' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(177): message : see reference to class template instantiation 'std::chrono::duration<__int64,std::nano>' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\chrono(647): message : see reference to class template instantiation 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::steady_clock::duration>' being compiled
@@ -41,18 +151,18 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         [
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:             _Ty1=float
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,16): warning C4244:         ]
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         with
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         [
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :             _Other1=double,
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :             _Other2=double
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         ]
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         with
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         [
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :             _Other1=double,
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :             _Other2=double
-C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(78): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :             _Other1=double,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :             _Other2=double
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         with
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         [
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :             _Other1=double,
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :             _Other2=double
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(89): message :         ]
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         with
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
@@ -62,9 +172,29 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         [
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:             _Ty2=float
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(127,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:             _Ty=double
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:             _Ty1=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,16): warning C4244:         ]
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(100): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(std::pair<double,double> &&) noexcept' being compiled
+C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\main.cpp(100): message : see reference to function template instantiation 'std::pair<float,float>::pair<double,double,0>(std::pair<double,double> &&) noexcept' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty=double
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:             _Ty2=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\utility(165,1): warning C4244:         ]
   Generating code
-  1 of 673 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  124 of 813 functions (15.3%) were compiled, the rest were copied from previous compilation.
+    45 functions were new in current compilation
+    66 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   UGV.vcxproj -> C:\Users\karth\Documents\Visual Studio 2019\Projects\UGV\x64\Release\UGV.exe

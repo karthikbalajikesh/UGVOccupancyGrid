@@ -33,15 +33,18 @@ void PolarGrid::updatePolarOccupancy(vector<std::pair<float,float>> Measurements
 	*/
 	transformCoordinates(Measurements);
 
-	for (auto x : Measurements) {
+	for (int i = 0; i < Measurements.size();i++) {
 		// Function returns the index of the Node which is measured as obstacle. 
-		std::pair<int, int> indices = findNodeIndex(x);
+		std::pair<int, int> indices = findNodeIndex(Measurements[i]);
 		// Update that node as occupied. 
 		PolarMap[indices.first][indices.second].updateOccupancy(2);
 		//this->AddObstacle(indices.first, indices.second);
 		for (int i = indices.first + 1;i < SizeX; i++) {
 			// Anything beyond cell as unknown
-			PolarMap[i][indices.second].updateOccupancy(1);
+			if (PolarMap[i][indices.second].occupancy != 2) {
+				PolarMap[i][indices.second].updateOccupancy(1);
+			}
+			
 			//this->AddUnknown(i, indices.second);
 		}
 	}
@@ -190,11 +193,10 @@ void PolarGrid::transformCoordinates(vector < pair<float, float>> &Measurements)
 	Equation : Theta_effective = Theta_pose from Localization 
 									- THeta_lidar from Measurement + 360
 	*/
-
-	for (pair<float, float> coordinate : Measurements) {
-		float theta_lidar = coordinate.first;
-		float theta_pose = StateEstimator->getAngle();
-		coordinate.first = theta_pose - theta_lidar + 360.0;
+	float theta_pose = StateEstimator->getAngle();
+	for (int i = 0;i < Measurements.size();i++) {
+		float theta_lidar = Measurements[i].first;
+		Measurements[i].first = theta_pose - theta_lidar + 360.0;
 	}
 }
 

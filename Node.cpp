@@ -1,14 +1,17 @@
 #include "Node.h"
 #include<iostream>
 // Default Constructor
-Node::Node() :coordinates({ 0,0 }), probability(0.5), ResolutionX(20), ResolutionY(20) {}
+Node::Node() :coordinates({ 0,0 }), probability(0.5), ResolutionX(20), ResolutionY(20)
+	,logOdds(0.0){}
 
 // Overloaded Constructor with long long values
-Node::Node(long long &x, long long &y):coordinates({x,y}), probability(0.5), ResolutionX(20), ResolutionY(20){}
+Node::Node(long long &x, long long &y):coordinates({x,y}), 
+		probability(0.5), ResolutionX(20), ResolutionY(20),logOdds(0.0){}
 						 
 
 // Overloaded Constructor with float values in meter
-Node::Node(float x, float y):coordinates({x*1000.0,y*1000.0}), probability(0.5), ResolutionX(20), ResolutionY(20) {}
+Node::Node(float x, float y):coordinates({x*1000.0,y*1000.0}), 
+probability(0.5), ResolutionX(20), ResolutionY(20), logOdds(0.0) {}
 
 // Check Occupancy function
 bool Node::CheckOccupancy() {
@@ -64,4 +67,15 @@ std::vector<long long> Node::getbounds() {
 	Bounds[3] = coordinates.second - (ResolutionY / 2);
 
 	return Bounds;
+}
+
+
+float Node::getLogOdds() {
+	return logOdds;
+}
+
+void Node::UpdateLogOdds(float &LO) {
+	// Function adds the recursive term with value 
+	// obtained from inverse sensor model
+	this->logOdds =this->logOdds + LO;
 }
